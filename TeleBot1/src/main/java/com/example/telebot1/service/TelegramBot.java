@@ -1,11 +1,15 @@
 package com.example.telebot1.service;
 
 import com.example.telebot1.config.BotConfig;
+import com.example.telebot1.model.User;
+import com.example.telebot1.model.UserRepository;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.commands.SetMyCommands;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
+import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.commands.BotCommand;
 import org.telegram.telegrambots.meta.api.objects.commands.scope.BotCommandScope;
@@ -13,6 +17,7 @@ import org.telegram.telegrambots.meta.api.objects.commands.scope.BotCommandScope
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 import javax.xml.stream.events.Comment;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +25,8 @@ import java.util.List;
 @Component
 public class TelegramBot extends TelegramLongPollingBot {
 
+    @Autowired
+    private UserRepository userRepository;
     final BotConfig config;
     static final String HELP_TEXT = "This bot was created to demonstrate telegram abilities. " +
             "You can choose command from main menu." +
@@ -40,6 +47,9 @@ public class TelegramBot extends TelegramLongPollingBot {
             log.error("Error setting bot's command list: " + e.getMessage());
         }
     }
+
+
+
     @Override
     public void onUpdateReceived(Update update) {
         if(update.hasMessage() && update.getMessage().hasText()) {
@@ -47,6 +57,7 @@ public class TelegramBot extends TelegramLongPollingBot {
             long chatId = update.getMessage().getChatId();
             switch (messageText) {
                 case "/start":
+                    registerUser(update.getMessage());
                     try {
                         startCommandReceived(chatId, update.getMessage().getChat().getFirstName());
                     } catch (TelegramApiException e) {
@@ -65,9 +76,27 @@ public class TelegramBot extends TelegramLongPollingBot {
 
     }
 
-    private void startCommandReceived(long chatId, String firstName) throws TelegramApiException {
-        String answer = "Hi, " + firstName + ", nice to meet you!";
-        log.info("Replied to user " + firstName);
+    private void registerUser(Message message) {
+        if(userRepository.findById(message.getChatId()).isEmpty()) {
+            var chatId = message.getChatId();
+            var chat = message.getChat();
+
+            User user = new User();
+            user.setChatId(chatId);
+            user.setFirstName(chat.getFirstName());
+            user.setLastName(chat.getLastName());
+            user.setUserName(chat.getUserName());
+            user.setRegisteredAt(new Timestamp(System.currentTimeMillis()));
+
+            userRepository.save(user);
+            log.info("user saved: " + user);
+        }
+
+    }
+
+    private void startCommandReceived(long chatId, String name) throws TelegramApiException {
+        String answer = "Hi, " + name + ", nice to meet you!";
+        log.info("Replied to user " + name);
         sendMessage(chatId, answer);
 
     }
