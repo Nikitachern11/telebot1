@@ -1,0 +1,24 @@
+2023-10-10 20:49:35,213 INFO c.e.t.TeleBot1Application [main] Starting TeleBot1Application using Java 17.0.8.1 with PID 83552 (/home/nikita/Desktop/Programming/Java/telebot1/TeleBot1/target/classes started by nikita in /home/nikita/Desktop/Programming/Java/telebot1/TeleBot1)
+2023-10-10 20:49:35,214 DEBUG c.e.t.TeleBot1Application [main] Running with Spring Boot v3.1.4, Spring v6.0.12
+2023-10-10 20:49:35,214 INFO c.e.t.TeleBot1Application [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-10 20:49:36,122 INFO c.e.t.TeleBot1Application [main] Started TeleBot1Application in 1.099 seconds (process running for 11.501)
+2023-10-10 20:51:11,467 INFO c.e.t.s.TelegramBot [TeleBot1 Telegram Executor] Replied to user Nikita
+2023-10-10 20:57:13,513 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.example.telebot1.TeleBot1ApplicationTests]: TeleBot1ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-10 20:57:13,586 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.example.telebot1.TeleBot1Application for test class com.example.telebot1.TeleBot1ApplicationTests
+2023-10-10 20:57:13,847 INFO c.e.t.TeleBot1ApplicationTests [main] Starting TeleBot1ApplicationTests using Java 17.0.8.1 with PID 84281 (started by nikita in /home/nikita/Desktop/Programming/Java/telebot1/TeleBot1)
+2023-10-10 20:57:13,848 DEBUG c.e.t.TeleBot1ApplicationTests [main] Running with Spring Boot v3.1.4, Spring v6.0.12
+2023-10-10 20:57:13,848 INFO c.e.t.TeleBot1ApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-10 20:57:14,809 INFO c.e.t.TeleBot1ApplicationTests [main] Started TeleBot1ApplicationTests in 1.127 seconds (process running for 1.901)
+2023-10-10 20:57:14,984 ERROR o.t.t.u.DefaultBotSession [TeleBot1 Telegram Connection] Error executing org.telegram.telegrambots.meta.api.methods.updates.GetUpdates query: [409] Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error executing org.telegram.telegrambots.meta.api.methods.updates.GetUpdates query: [409] Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponseInternal(PartialBotApiMethod.java:54)
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponseArray(PartialBotApiMethod.java:39)
+	at org.telegram.telegrambots.meta.api.methods.updates.GetUpdates.deserializeResponse(GetUpdates.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:258)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:188)
+2023-10-10 20:58:53,726 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.example.telebot1.TeleBot1ApplicationTests]: TeleBot1ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-10 20:58:53,796 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.example.telebot1.TeleBot1Application for test class com.example.telebot1.TeleBot1ApplicationTests
+2023-10-10 20:58:54,027 INFO c.e.t.TeleBot1ApplicationTests [main] Starting TeleBot1ApplicationTests using Java 17.0.8.1 with PID 84546 (started by nikita in /home/nikita/Desktop/Programming/Java/telebot1/TeleBot1)
+2023-10-10 20:58:54,027 DEBUG c.e.t.TeleBot1ApplicationTests [main] Running with Spring Boot v3.1.4, Spring v6.0.12
+2023-10-10 20:58:54,028 INFO c.e.t.TeleBot1ApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-10 20:58:55,006 INFO c.e.t.TeleBot1ApplicationTests [main] Started TeleBot1ApplicationTests in 1.127 seconds (process running for 1.89)
