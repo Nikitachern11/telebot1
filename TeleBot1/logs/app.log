@@ -22,3 +22,18 @@ org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error exe
 2023-10-10 20:58:54,027 DEBUG c.e.t.TeleBot1ApplicationTests [main] Running with Spring Boot v3.1.4, Spring v6.0.12
 2023-10-10 20:58:54,028 INFO c.e.t.TeleBot1ApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
 2023-10-10 20:58:55,006 INFO c.e.t.TeleBot1ApplicationTests [main] Started TeleBot1ApplicationTests in 1.127 seconds (process running for 1.89)
+2023-10-10 21:27:04,244 INFO c.e.t.TeleBot1Application [main] Starting TeleBot1Application using Java 17.0.8.1 with PID 86438 (/home/nikita/Desktop/Programming/Java/telebot1/TeleBot1/target/classes started by nikita in /home/nikita/Desktop/Programming/Java/telebot1/TeleBot1)
+2023-10-10 21:27:04,245 DEBUG c.e.t.TeleBot1Application [main] Running with Spring Boot v3.1.4, Spring v6.0.12
+2023-10-10 21:27:04,246 INFO c.e.t.TeleBot1Application [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-10 21:27:05,327 ERROR c.e.t.s.TelegramBot [main] Error setting bot's command list: Error executing org.telegram.telegrambots.meta.api.methods.commands.SetMyCommands query: [400] Bad Request: BOT_COMMAND_INVALID
+2023-10-10 21:27:05,594 INFO c.e.t.TeleBot1Application [main] Started TeleBot1Application in 1.604 seconds (process running for 12.049)
+2023-10-10 21:27:20,549 INFO c.e.t.s.TelegramBot [TeleBot1 Telegram Executor] Replied to user Nikita
+2023-10-10 21:31:20,255 INFO c.e.t.TeleBot1Application [main] Starting TeleBot1Application using Java 17.0.8.1 with PID 86758 (/home/nikita/Desktop/Programming/Java/telebot1/TeleBot1/target/classes started by nikita in /home/nikita/Desktop/Programming/Java/telebot1/TeleBot1)
+2023-10-10 21:31:20,256 DEBUG c.e.t.TeleBot1Application [main] Running with Spring Boot v3.1.4, Spring v6.0.12
+2023-10-10 21:31:20,256 INFO c.e.t.TeleBot1Application [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-10 21:31:21,271 INFO c.e.t.TeleBot1Application [main] Started TeleBot1Application in 1.209 seconds (process running for 11.604)
+2023-10-10 21:36:08,878 INFO c.e.t.TeleBot1Application [main] Starting TeleBot1Application using Java 17.0.8.1 with PID 87240 (/home/nikita/Desktop/Programming/Java/telebot1/TeleBot1/target/classes started by nikita in /home/nikita/Desktop/Programming/Java/telebot1/TeleBot1)
+2023-10-10 21:36:08,879 DEBUG c.e.t.TeleBot1Application [main] Running with Spring Boot v3.1.4, Spring v6.0.12
+2023-10-10 21:36:08,879 INFO c.e.t.TeleBot1Application [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-10 21:36:09,951 INFO c.e.t.TeleBot1Application [main] Started TeleBot1Application in 1.298 seconds (process running for 11.795)
+2023-10-10 21:36:13,983 INFO c.e.t.s.TelegramBot [TeleBot1 Telegram Executor] Replied to user Nikita
